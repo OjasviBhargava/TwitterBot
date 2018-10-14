@@ -6,9 +6,12 @@ var Twit = require('twit');
 var config = require('./config');
 var T = new Twit(config);
   
+// grab the tweet message from the command line arguments
+var msg = process.argv[2];
+
 //the message we want to post
 var tweet_message = {
-  status: 'My First Tweet using #TwitterAPI and #NodeJS'
+  status: msg
 }
 
 //This posts our tweet
